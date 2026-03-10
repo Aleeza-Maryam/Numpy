@@ -43,4 +43,17 @@ ar_range=np.arange(4)
 print(ar_range)
 # 2d array
 ar_range_2d=np.arange(5,10)
-print(ar_range_2d)
+print(ar_range_2d)       #np.arange(start, stop)  ..last wla exculde hota hai
+
+
+# diagonal elements filled with 1's
+ar_dia=np.eye(4)   #mtlb 4x4 ka array
+print(ar_dia)
+
+# dimensions ko pass
+ar_da_dim=np.eye(3,4)   #3 rows and 4 columns
+print(ar_da_dim)
+
+# specified interval
+ar_spec=np.linspace(0,10,5)
+print(ar_spec)   #0 to 10 ke beech 5 equally spaced numbers
