@@ -11,3 +11,22 @@ print(string,string.dtype)
 
 combo=np.array([1.0,2.0,"hyy",1,2])
 print(combo,combo.dtype)
+
+
+# changing datatypes
+
+x=np.array([1,2,3,4])
+print("Datatype before change:",x.dtype)
+x1=np.array([1,2,3,4],dtype=np.int8)
+print("Datatype after change:",x1.dtype)
+
+x2=np.array([1.0,22.0,3.0],dtype=np.float32)
+print("datatype of float after change",x2.dtype)
+
+# using charactters change datatype
+
+x3=np.array([1,2,3,4],dtype="S")
+print("datatype of x3",x3.dtype)
+
+x4=np.array([1.0,2.0,3.0,4.0],dtype="i")
+print("datatype of x4",x4.dtype)
