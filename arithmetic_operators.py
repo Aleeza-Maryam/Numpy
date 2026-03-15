@@ -27,3 +27,11 @@ print("Multiplication using function:",mult_function)
 rec=np.reciprocal(var2)
 print("Reciprocal using function:",rec)
 
+
+# 2d array 
+arr2d_1=np.array([[1,2,3,4],[5,6,7,8]])
+arr2d_2=np.array([[5,6,7,8],[1,2,4,5]])
+arr2d_1_add=np.add(arr2d_1,arr2d_2)
+print("Addition of 2d array:",arr2d_1_add)
+arr_sub=arr2d_1-arr2d_2
+print("Subtraction of 2d array:",arr_sub)
