@@ -35,3 +35,4 @@ var8=np.array([
 print(var8)
 print(var8.shape)
 print(var7+var8)
+# NumPy do arrays ko tab add karne deta hai jab unki dimensions ya to match karti hon, ya unmein se koi ek 1 ho.
