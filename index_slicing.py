@@ -42,4 +42,40 @@ print(sl1[:])
 # step / jump
 sl2=np.array([1,2,3,4,5,6,7,8,9,10])
 print(sl2[::2])          #1 word ki jump
-print(sl2[2:8:1])
+print(sl2[2:8:1])   #jjmp 0 hai mtlb
+
+
+# 2d array
+
+sl2d=np.array([
+    [1,2,3,4],
+    [5,6,7,8]
+])
+print(sl2d[:,1:3])
+result = np.array([
+    sl2d[0, 1:3],   # [2, 3]
+    sl2d[1, 2:4]    # [7, 8]
+])
+
+print(result)
+
+print(sl2d[1,:])
+
+# 3d arrays
+
+sl3d=np.array([
+    [
+        [1,2,3,4],
+        [5,6,7,8]
+    ],
+    [
+        [9,10,11,12],
+        [13,14,15,16]
+    ]
+
+])
+print(sl3d)
+print(sl3d[:,1,1:3])
+
+print(sl3d[0,1,1:3])
+print(sl3d[1,0,0:2])
