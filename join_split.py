@@ -52,3 +52,24 @@ print("stack simple ",np.stack((var1,var2)))
 print("stack with horizontal ",np.hstack((var1,var2)))
 print("stack with vertical ",np.vstack((var1,var2)))
 print("stack with height ",np.dstack((var1,var2)))
+
+# split
+# break arrays to multiple
+var5=np.array([1,3,4,5,6,7])
+print("split into 3 ",np.split(var5,3))
+arsplit=np.split(var5,3)
+print(arsplit)
+print(arsplit[1])
+
+# 2d array
+split_2d=np.array([
+    [4,5,6,7],
+    [8,9,7,6]
+])
+arsplit2d=np.split(split_2d,2)
+print(arsplit2d)
+print(arsplit2d[1])
+
+# axis k alng split
+arsplit2d_1=np.split(split_2d,2,axis=1)
+print(arsplit2d_1)
