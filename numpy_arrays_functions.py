@@ -57,3 +57,4 @@ print(ar_da_dim)
 # specified interval
 ar_spec=np.linspace(0,10,5)
 print(ar_spec)   #0 to 10 ke beech 5 equally spaced numbers
+

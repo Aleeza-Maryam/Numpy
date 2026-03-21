@@ -63,3 +63,4 @@ res = var_22d[z1]
 res1 = var_22d[var_22d > 25]
 print(res)
 print(res1)
+

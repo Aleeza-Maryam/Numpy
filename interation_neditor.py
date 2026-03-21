@@ -37,7 +37,7 @@ for i in var3:
 
 
 
-# neditor function agr baar baar for loop ni lgana chahte in case of 2dand 3d
+# neditor function agr baar baar for loop ni lgana chahte in case of 2d and 3d
 print("nditer")
 var4=np.array([
     [
