@@ -78,3 +78,43 @@ print(e)
 print(e1)
 print("e2 is", e2)
 
+var33=np.array([
+    [
+        [1,2,3],
+        [4,5,6]
+
+    ],
+    [
+        [7,8,9],
+        [10,11,12]
+    ]]
+)
+# 9 is at the 8th index (counting from 0)
+e3 = np.delete(var33, 8)
+print(e3)
+var44=np.array(
+    [
+    [
+        [1,2,3],
+        [4,5,6]
+
+    ],
+    [
+        [7,8,9],
+        [10,11,12]
+    ]]
+)
+e4=np.delete(var44,[1,0],axis=0)
+print(e4)
+
+sheet1 = var44[0]
+print(sheet1)
+# This removes 7 and 10 specifically
+e44 = np.delete(var44, [6, 9])
+print(e44)
+# This deletes the 0th column from BOTH sheets
+e45 = np.delete(var44, 0, axis=2)
+#axis0 depth axis1rows axiscolumns
+
+print(e45)
+# You cannot have a 3D array where one sheet has 3 columns and the other sheet has 2 columns. NumPy arrays must be perfectly "rectangular" (uniform) in their dimensions.
