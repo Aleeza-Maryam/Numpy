@@ -55,3 +55,26 @@ print(vaxis1)
 # Har row ke index 1 par '99' insert karna
 v_axis2 = np.insert(var3, 1, 99, axis=2)
 print(v_axis2)
+
+
+# delete
+var=np.array([1,2,3,4,5])
+print(var)
+d=np.delete(var,2)
+print(d)
+
+
+# 2d array
+var22=np.array([
+    [1,2,3,4],
+    [5,6,7,8]
+])
+
+# To delete the first two columns (indices 0 and 1)
+e1 = np.delete(var22, [0, 1], axis=1)
+e2=np.delete(var22,[0],axis=0)
+e=np.delete(var22,[0,1])
+print(e)
+print(e1)
+print("e2 is", e2)
+
