@@ -77,4 +77,15 @@ var33=np.matrix(
 print(np.linalg.inv(var33))
 
 # power
-print(np.linalg.matrix_power(var33,0))
+print(np.linalg.matrix_power(var33,0))    #identity matrix
+print(np.linalg.matrix_power(var33,2))    #matrix ko khud se multiply
+print(np.linalg.matrix_power(var33,-2))    #iinverse *power
+
+
+# n = 1: Ye Original Matrix return karega.
+
+
+# determinant
+var44=np.matrix([[1,2],[3,4]])
+print(var44)
+print(np.linalg.det(var44))
