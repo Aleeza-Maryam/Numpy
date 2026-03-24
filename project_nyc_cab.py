@@ -15,3 +15,5 @@ print(rides_feb.shape[0])
 
 # no. of ides passenger give mre than 50 dollar
 print(taxi[taxi[:, -3] > 50, 1].shape[0])
+# number of rides where drop is 2 
+print(taxi[taxi[:,6]==2,6].shape[0])
