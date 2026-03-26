@@ -127,3 +127,49 @@ sorted_descending = data[descending_indices]
 
 # Check karein: Pehli 5 rows ka alcohol (Index 10) - Ab ye sabse zyada honi chahiye
 print("Sorted Alcohol (Highest to Lowest):\n", sorted_descending[:5, 10])
+
+
+# Level 4: Advanced Analysis
+# "Quality" aur "Alcohol" ke darmiyan correlation coefficient nikalein.
+
+# Alcohol ki values ko categorize karein (e.g., >11 ko 1 aur <11 ko 0 assign karein).
+
+# Pura array ka percentile (25th, 50th, 75th) calculate karein.
+
+# Column-wise Sum nikal kar check karein ke kaunsa feature sabse bada weight rakhta hai.
+
+# Dataset ko do hisson mein split karein (80% training aur 20% testing) NumPy indexing ke zariye.
+
+corr_matrix = np.corrcoef(data[:, 10], data[:, 11])
+
+# Hum [0, 1] position se asal value nikaalte hain
+# Humein poora table nahi chahiye, sirf woh ek number chahiye jo dono ka talluq bataye.
+
+# 0 ka matlab hai Pehli Row
+
+# 1 ka matlab hai Doosra Column
+correlation = corr_matrix[0, 1]
+print(f"Alcohol aur Quality ka Correlation: {correlation:.4f}")
+# Alcohol ki values ko categorize karein (e.g., >11 ko 1 aur <11 ko 0 assign karein).
+alcohol = data[:, 10]
+
+# 11 se zyada ko 1 (Strong) aur kam ko 0 (Light) assign karein
+# np.where(condition, value_if_true, value_if_false)
+alcohol_category = np.where(alcohol > 11, 1, 0)
+
+print("Pehli 10 Alcohol Categories:", alcohol_category[:10])
+print("Strong wines (1) ka total count:", np.sum(alcohol_category))
+
+# Pura array ka percentile (25th, 50th, 75th) calculate karein.
+# Percentiles batate hain ke aapka data kahan khara hai. Maslan, 50th percentile (Median) batata hai ke aadhi wines ki values is se kam hain.
+p25, p50, p75 = np.percentile(data, [25, 50, 75])
+
+print(f"25th Percentile: {p25}")
+print(f"50th Percentile (Median): {p50}")
+print(f"75th Percentile: {p75}")
+
+# Column-wise Sum nikal kar check karein ke kaunsa feature sabse bada weight rakhta hai.
+# axis=0 matlab column-wise sum
+col_sums = np.sum(data, axis=0)
+
+print("Har column ka total sum:\n", col_sums)
